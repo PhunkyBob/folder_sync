@@ -72,6 +72,8 @@ Example:
 }
 ```
 
+Note that you have to use `/` and not `\`, even if you are using Windows.
+
 This configuration will check all files and folders in:
 
 - Mega account `first_account`, under root folder.
