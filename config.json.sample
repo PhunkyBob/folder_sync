@@ -1,0 +1,15 @@
+{
+	"local_folders": [
+		{
+			"label": "",
+			"path": "C:/my_local_folder"
+		}
+	],
+	"mega_accounts": [
+		{
+			"login": "email1@domain.com",
+			"password": "mysecurepassword",
+			"path": "/"
+		}
+	]
+}
