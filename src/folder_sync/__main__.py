@@ -35,7 +35,7 @@ BANNER = r"""
 |_|   \___/ \_)____|_____)_|      (______/ \__  |_| |_|\____)
                                           (____/             
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 latest_version_url = "https://raw.githubusercontent.com/PhunkyBob/folder_sync/master/VERSION"
 latest_binary = "https://github.com/PhunkyBob/folder_sync/releases/latest"
 git_repo = "https://github.com/PhunkyBob/folder_sync"

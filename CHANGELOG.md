@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.1 (2024-02-02)
+
+- [NEW] Handle login exception errors.
+
 ## v1.0.0 (2024-02-01)
 
 - Initial version.
