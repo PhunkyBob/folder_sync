@@ -89,6 +89,9 @@ def main():
     print("[INFO] Getting local files...")
     for folder in config["local_folders"]:
         print(f"[INFO] Getting local files in \"{folder['path']}\"...")
+        if not os.path.exists(folder["path"]):
+            print(f"[WARNING] Folder \"{folder['path']}\" not found!")
+            continue
         local_files |= list_local_files_and_directories(folder["path"], folder["label"])
         print(f"[INFO] Items found: {len(local_files)}")
 

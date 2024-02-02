@@ -75,8 +75,7 @@ def get_path(file_id: str, mega_files: dict) -> str:
     elem_id = file_id
     while elem_id:
         if elem_id not in mega_files:
-            path_elems.append("???")
-            path_elems.append("???")
+            path_elems.extend(("???", "???"))
             break
         if mega_files[elem_id]["t"] == 4:
             # Rubbish Bin
@@ -90,7 +89,11 @@ def list_mega_files_and_directories(login: str, password: str, path: str = "") -
     while path and path[0] in ("/", "\\"):
         path = path[1:]
     mega = Mega()
-    m = mega.login(login, password)
+    try:
+        m = mega.login(login, password)
+    except Exception as e:
+        print(f"[ERROR] Can't login to Mega: {e}")
+        return {}
     files = m.get_files()
     all_files: Dict[str, UploadedFile] = {}
     for mega_id, elem in files.items():
