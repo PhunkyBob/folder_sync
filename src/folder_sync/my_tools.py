@@ -77,7 +77,7 @@ def get_path(file_id: str, mega_files: dict) -> str:
         if elem_id not in mega_files:
             path_elems.extend(("???", "???"))
             break
-        if mega_files[elem_id]["t"] == 4:
+        if "t" in mega_files[elem_id] and mega_files[elem_id]["t"] == 4:
             # Rubbish Bin
             return ""
         path_elems.append(mega_files[elem_id]["a"]["n"])
